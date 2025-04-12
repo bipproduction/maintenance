@@ -1,14 +1,27 @@
 "use client";
-import { Stack, Text } from "@mantine/core";
+import { Box, Card, Container, Stack } from "@mantine/core";
+import Maintenance from "./_componets/Maintenance";
 
 export default function Home() {
   return (
-    <Stack h={"100vh"} align="center">
-      <Text size="3rem">Maintenance !</Text>
-      <iframe
-        src="https://aaarafat.github.io/JS-Flappy-Bird/index.html"
-        style={{ overflow: "hidden", height: "100%", width: "100%" }}
-      />
-    </Stack>
+    <Container fluid>
+      <Stack align="center">
+        <Card>
+          <Maintenance />
+        </Card>
+        <Box h={"460"}>
+          <iframe
+            src="https://aaarafat.github.io/JS-Flappy-Bird/index.html"
+            style={{
+              overflow: "hidden",
+              height: "100%",
+              width: "100%",
+              backgroundColor: "#000",
+              border: "0px solid #000",
+            }}
+          />
+        </Box>
+      </Stack>
+    </Container>
   );
 }
